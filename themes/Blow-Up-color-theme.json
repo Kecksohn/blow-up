@@ -31,6 +31,10 @@
         "editorGroup.border": "#B59E7A",
         "peekViewResult.selectionBackground": "#B59E7A",
         "list.activeSelectionBackground": "#B59E7A",
+        // Focused selection sits on solid tan -> black. Unfocused is left
+        // unset on purpose, so it keeps inheriting sideBar.foreground.
+        "list.activeSelectionForeground": "#000000",
+        "list.activeSelectionIconForeground": "#000000",
         "scrollbarSlider.background": "#b59e7aa4",
         "scrollbarSlider.hoverBackground": "#B59E7A",
         "menu.border": "#B59E7A",
@@ -72,13 +76,16 @@
         "editor.foreground": "#bdb395",
         "editorCursor.foreground": "#86E08F",
         "sideBarTitle.foreground": "#bbbbbb",
-        "tab.activeForeground": "#FFF",
+        // Active/hovered tabs sit on tan (#B59E7A); light text is unreadable there.
+        "tab.activeForeground": "#000000",
         "tab.activeBackground": "#B59E7A",
         "tab.hoverBackground": "#b59e7aa4",
+        "tab.hoverForeground": "#000000",
         "tab.inactiveForeground": "#CCC",
         "tab.inactiveBackground": "#042327",
         "tab.unfocusedActiveBackground": "#b59e7a65",
-        "tab.unfocusedActiveForeground": "#cccccc94",
+        "tab.unfocusedActiveForeground": "#000000a8",
+        "tab.unfocusedHoverForeground": "#000000a8",
         "tab.border": "#B59E7A",
         "sideBar.foreground": "#CCC",
         "activityBarBadge.background": "#B59E7A",
@@ -104,6 +111,14 @@
         "statusBar.noFolderBackground": "#B59E7A",
         "statusBar.foreground": "#000",
         "statusBar.border": "#B59E7A",
+        // Theme defined no statusBarItem.* colors, so hover fell back to a dark
+        // overlay while the foreground stayed statusBar.foreground (#000) —
+        // black on black. Give hover/active an explicit dark bg + white text.
+        "statusBarItem.hoverBackground": "#042327",
+        "statusBarItem.hoverForeground": "#FFFFFF",
+        "statusBarItem.activeBackground": "#021518",
+        "statusBarItem.compactHoverBackground": "#0a3a40",
+        "statusBarItem.focusBorder": "#042327",
         "editorBracketHighlight.foreground1": "#B59E7A",
         "editorBracketHighlight.foreground2": "#B59E7A",
         "editorBracketHighlight.foreground3": "#B59E7A",

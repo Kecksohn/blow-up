@@ -3,9 +3,13 @@
     "displayName": "Blow-Up",
     "description": "Dark theme derived from Naysayer88 (David Freer), with clangd semantic highlighting for custom types.",
     "version": "1.2.0",
-    "publisher": "jonas",
+    "publisher": "Kecksohn",
     "license": "SEE LICENSE IN LICENSE",
-    "homepage": "https://github.com/soulshined/Visual-Studio-Code-Naysayer88-Color-Theme",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Kecksohn/blow-up"
+    },
+    "homepage": "https://github.com/Kecksohn/blow-up",
     "keywords": [
         "naysayer88",
         "jonathan blow",

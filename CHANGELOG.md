@@ -1,5 +1,28 @@
 # Change Log
 
+## v1.2.0
+
+Forked from [Naysayer88](https://github.com/soulshined/Visual-Studio-Code-Naysayer88-Color-Theme) and renamed to Blow-Up.
+
+- Enable `semanticHighlighting`, so LSP-provided types are colored. Previously
+  `size_t` was colored by the TextMate grammar while user-defined types were not.
+- Types (`class`, `struct`, `enum`, `typeParameter`, `concept`) → `#9DE3C0`.
+- Variables, parameters and properties pinned to `editor.foreground` (`#bdb395`),
+  so enabling semantics does not recolor them.
+- Split `keyword.control` out of the keyword rule → `#cee5ed`. The operator
+  keywords (`&&`, `||`, `new`) stay `#CCC`.
+- Strings → `#2c9e93`.
+- `constant.numeric` → `#7edccd`. Previously unset, so numbers fell back to
+  `editor.foreground`.
+- Fix unreadable foregrounds on the tan (`#B59E7A`) chrome: active and hovered
+  tabs, and focused list selections, are now black. Unfocused selections keep
+  inheriting `sideBar.foreground`.
+- Add `statusBarItem` hover/active colors. Without them, hovering a status bar
+  item drew a dark default background under `statusBar.foreground` (`#000`).
+- Remove `contributes.configuration`. The per-language blocks were not a valid
+  configuration schema and never applied on current VS Code — see the README
+  for the equivalent user settings.
+
 ## v1.1.6
 
 - Update for vscode's new native bracket matcher guidelines
