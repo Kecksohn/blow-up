@@ -1,6 +1,23 @@
 {
-    "name": "Naysayer88",
+    "name": "Blow-Up",
     "type": "dark",
+    // Opt in to clangd/LSP semantic tokens. Without this VS Code drops them
+    // and custom types (slot_handle) stay uncolored while size_t does not.
+    "semanticHighlighting": true,
+    "semanticTokenColors": {
+        // Types match storage.type below.
+        "class": "#9DE3C0",
+        "struct": "#9DE3C0",
+        "type": "#9DE3C0",
+        "enum": "#9DE3C0",
+        "typeParameter": "#9DE3C0",
+        "concept": "#9DE3C0",
+        // Semantics also light up identifiers that used to fall through to
+        // editor.foreground. Pin them back so they match functions/fields.
+        "variable": "#bdb395",
+        "parameter": "#bdb395",
+        "property": "#bdb395"
+    },
     "colors": {
         "contrastBorder": "#B59E7A",
         "input.border": "#B59E7A",
@@ -133,12 +150,20 @@
         {
             "name": "Keyword",
             "scope": [
-                "keyword.control",
                 "keyword.operator.logical",
                 "keyword.operator.new"
             ],
             "settings": {
                 "foreground": "#CCC"
+            }
+        },
+        {
+            "name": "Control flow",
+            "scope": [
+                "keyword.control"
+            ],
+            "settings": {
+                "foreground": "#cee5ed"
             }
         },
         {
@@ -168,7 +193,7 @@
                 "string"
             ],
             "settings": {
-                "foreground": "#2ca198"
+                "foreground": "#2c9e93"
             }
         },
         {
@@ -188,6 +213,15 @@
             ],
             "settings": {
                 "foreground": "#70c5bf"
+            }
+        },
+        {
+            "name": "Numbers",
+            "scope": [
+                "constant.numeric"
+            ],
+            "settings": {
+                "foreground": "#7edccd"
             }
         }
     ]
