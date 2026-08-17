@@ -31,10 +31,19 @@ To get the original's intended feel, in your `settings.json`:
 }
 ```
 
-## Install
+## Download
 
+Grab .vsix from the [**latest release**](https://github.com/Kecksohn/blow-up/releases/latest)
+
+
+## Installation
+
+### UI:
+`Extensions` -> `...` -> `Install from VSIX` -> (Downloaded File)
+
+### CLI:
 ```
-codium --install-extension blow-up-1.2.0.vsix
+codium --install-extension blow-up-*.vsix
 ```
 
 Then pick **Blow-Up** via `Ctrl+K Ctrl+T`.
@@ -42,7 +51,7 @@ Then pick **Blow-Up** via `Ctrl+K Ctrl+T`.
 ## Building
 
 ```
-npx @vscode/vsce package --allow-missing-repository
+npx @vscode/vsce package
 ```
 
 ## Note
